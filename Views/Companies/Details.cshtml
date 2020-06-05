@@ -1,0 +1,29 @@
+﻿@model TaskProject.Models.Company
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>CompanyName</th>
+        <td>@Model.CompanyName</td>
+    </tr>
+    <tr>
+        <th>ContactNumber</th>
+        <td>@Model.ContactNumber</td>
+    </tr>
+    
+    <tr>
+        <th>Address</th>
+        <td>@Model.Address</td>
+    </tr>
+
+</table>
+<a href="/companies/index">Back to Companies</a>

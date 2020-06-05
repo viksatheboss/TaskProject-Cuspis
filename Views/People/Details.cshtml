@@ -1,0 +1,32 @@
+﻿@model TaskProject.Models.People
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>FirstName</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>LastName</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>MobileNumber</th>
+        <td>@Model.MobileNumber</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>@Model.Address</td>
+    </tr>
+
+</table>
+<a href="/people/index">Back to People</a>

@@ -1,0 +1,44 @@
+﻿@model List<TaskProject.Models.People>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<h2>People</h2>
+
+<a href="/people/create">Create</a>
+
+<form class="form-inline" action="/people/index">
+    <input type="search" class="form-control mr-sm-2" style="width:150px" id="search" name="search" placeholder="Search" value="@ViewBag.search" />
+    <button class="btn btn-success">Search</button>
+</form>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>MobileNumber</th>
+        <th>Address</th>
+    </tr>
+    @if(Model == null)
+    {
+        return;
+    }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.MobileNumber</td>
+            <td>@item.Address</td>
+            <td>
+                <a href="/people/details/@item.Id">Details</a>
+                <a href="/people/edit/@item.Id">Edit</a>
+                <a href="/people/delete/@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

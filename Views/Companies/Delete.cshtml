@@ -1,0 +1,31 @@
+﻿@model TaskProject.Models.Company
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+<form action="/companies/delete/@Model.Id" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="CompanyName">CompanyName</label>
+            <input type="hidden" name="CompanyName" value="@Model.CompanyName" />
+            @Model.CompanyName
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="ContactNumber">ContactNumber</label>
+            @Model.ContactNumber
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Address">Address</label>
+            @Model.Address
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a class="btn btn-danger" href="/companies/index">Cancel</a>
+</form>
+
